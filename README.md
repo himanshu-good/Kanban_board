@@ -10,6 +10,11 @@ A responsive and interactive task management tool built using HTML, CSS, and Jav
 - ✅ Fully **responsive design** that works on different screen sizes.
 - ✅ Organized project structure with separate JavaScript files for better maintainability.
 
+## Live Demo
+
+🔗 [Click here to view the live Kanban board](https://kanban-board-goac.vercel.app)
+
+
 ## Technologies Used
 
 - HTML

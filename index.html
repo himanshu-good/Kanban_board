@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Kanban Board</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Kanban Board</h1>
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Task Title" required />
+            <textarea id="task-desc" placeholder="Task Description" rows="4" required></textarea>
+            <button type="submit">Add Task</button>
+        </form>
+        <div class="board" id="board">
+            <div class="column" data-status="todo">
+                <h2>To Do</h2>
+                <div class="separator"></div>
+                <div class="task-list" id="todo-list"></div>
+            </div>
+            <div class="column center" data-status="inprogress">
+                <h2>In Progress</h2>
+                <div class="separator"></div>
+                <div class="task-list" id="inprogress-list"></div>
+            </div>
+            <div class="column" data-status="done">
+                <h2>Done</h2>
+                <div class="separator"></div>
+                <div class="task-list" id="done-list"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Modal -->
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit Task</h3>
+                <button id="close-edit-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <input type="text" id="edit-title" placeholder="Task Title" />
+            <textarea id="edit-desc" rows="4" placeholder="Task Description"></textarea>
+            <button id="update-btn">Update Task</button>
+        </div>
+    </div>
+    <!-- View More Modal -->
+    <div class="modal" id="view-more-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Task Details</h3>
+                <button id="close-view-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="view-more-content"></div>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
